@@ -1,0 +1,248 @@
+.alignCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.modal {
+    background-color: #444547;
+    padding: 30px 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(300px, 60%, 85%);
+    height: auto;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.modal.sm {
+    width: auto;
+    height: auto;
+}
+
+.stretchedModal {
+    height: clamp(300px, 65%, 95%);
+}
+
+.mainTitle {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 2px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #3bffa3, #38a3f0);
+}
+
+.modal .lostTitle {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 2px;
+    color: rgba(255, 255, 255, 0.9)
+}
+
+.modalText {
+    font-size: 1.2rem;
+    color: rgb(185, 185, 185);
+}
+
+.modalSeparator {
+    width: 90%;
+    height: 5px;
+    background-color: #3a3a3c;
+    border-radius: 5px;
+    border: none;
+    margin: 30px 0 5px 0;
+}
+
+.modalButton {
+    background-color: #272728;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: rgb(185, 185, 185);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: #272728 solid 3px;
+}
+
+.modalButton:hover {
+    border: rgb(39, 39, 40) solid 3px;
+    color: #fff;
+    background-color: rgba(39, 39, 40, 0.5);
+}
+
+.successButton {
+    background-color: #3bffa3;
+    color: #292a2c;
+}
+
+.tile {
+    background-color: #333437;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.tileLetter {
+    font-size: 3.1rem;
+    font-weight: 900;
+    color: #27282a;
+    background-color: rgb(109, 119, 125);
+    width: 3.5rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+input.tileLetter {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 0;
+    background-color: rgb(141, 151, 156);
+}
+
+input.tileLetter:focus {
+    outline: rgb(110, 235, 224) 3px solid;
+}
+
+input.tileLetter:disabled {
+    background-color: rgb(87, 95, 99);
+    color: #444547;
+}
+
+input.tileLetter::placeholder {
+    color: #595b5f;
+    font-weight: 500;
+}
+
+.disabled {
+    opacity: 0.3;
+}
+
+.tileLetterCorrect {
+    background-image: linear-gradient(45deg, #3bffa3, #38a3f0);
+}
+
+.tileLetterPlacement {
+    border: 2px solid #3bffd8;
+    color: #3bffd8;
+    background-color: transparent;
+}
+
+.break {
+    margin-top: 25px;
+    min-height: 25px;
+}
+
+.alignRight {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.modalText span.wrongLetterModal {
+    color: #e45050;
+    font-weight: 900;
+}
+
+.modal .infoboxContainer {
+    gap: 1rem;
+    padding-top: 1.5rem;
+    display: flex;
+}
+
+.modal .infobox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    background-color: #5a83ff;
+    color: #fff;
+    position: relative;
+}
+
+.modal .infobox.clickable {
+    cursor: pointer;
+    background-color: #5c636e;
+    transition-duration: 0.2s;
+}
+
+.modal .infobox.clickable:hover {
+    outline: 5px solid #869ff1;
+    background-color: #68707e;
+}
+
+.modal .infobox.wBottom {
+    padding-bottom: 2.7rem;
+}
+
+.modal .infobox h1 {
+    font-size: 5em;
+    margin: 0;
+    line-height: 0.9em;
+}
+
+.modal .infobox h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.modal .infobox .progressbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.modal .progressbar .fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: width 0.5s ease-in-out;
+}
+
+.modal .infobox .progressbar h4 {
+    color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 1;
+    right: 0.4em;
+}
+
+.modal .visualisationCanvas {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1em;
+}
